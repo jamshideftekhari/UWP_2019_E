@@ -1,0 +1,47 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UWP_2019_E"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Custom="using:Microsoft.Xaml.Interactivity" xmlns:Custom1="using:Microsoft.Xaml.Interactions.Core"
+    x:Class="UWP_2019_E.MainPage"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock Text="Blend Exercises" TextWrapping="Wrap" FontSize="66.667" FocusVisualPrimaryBrush="#FFCDBCBC" Foreground="#FFE64343" HorizontalAlignment="Center" FontFamily="Segoe UI" Margin="0,0,0,10"/>
+            <Button Content="Exercise 1" Height="75" HorizontalAlignment="Stretch" FontSize="40" d:LayoutOverrides="TopPosition, BottomPosition" VerticalAlignment="Stretch" Margin="0,0,0,10">
+                <Custom:Interaction.Behaviors>
+                    <Custom1:EventTriggerBehavior EventName="Click">
+                        <Custom1:NavigateToPageAction TargetPage="UWP_2019_E.View.BlankPage1"/>
+                    </Custom1:EventTriggerBehavior>
+                </Custom:Interaction.Behaviors>
+            </Button>
+            <Button Content="Exercise 2" HorizontalAlignment="Stretch" FontSize="40" Margin="0,0,0,10">
+                <Custom:Interaction.Behaviors>
+                    <Custom1:EventTriggerBehavior EventName="Click">
+                        <Custom1:NavigateToPageAction TargetPage="UWP_2019_E.View.Exe2"/>
+                    </Custom1:EventTriggerBehavior>
+                </Custom:Interaction.Behaviors>
+            </Button>
+            <Button Content="Exercise 3" HorizontalAlignment="Stretch" FontSize="40" Margin="0,0,0,10">
+                <Custom:Interaction.Behaviors>
+                    <Custom1:EventTriggerBehavior EventName="Click">
+                        <Custom1:NavigateToPageAction TargetPage="UWP_2019_E.View.Exe3"/>
+                    </Custom1:EventTriggerBehavior>
+                </Custom:Interaction.Behaviors>
+            </Button>
+            <Button Content="Exercise 4" HorizontalAlignment="Stretch" FontSize="40" Margin="0,0,0,10">
+                <Custom:Interaction.Behaviors>
+                    <Custom1:EventTriggerBehavior EventName="Click">
+                        <Custom1:NavigateToPageAction TargetPage="UWP_2019_E.Exe4"/>
+                    </Custom1:EventTriggerBehavior>
+                </Custom:Interaction.Behaviors>
+            </Button>
+        </StackPanel>
+
+    </Grid>
+</Page>
