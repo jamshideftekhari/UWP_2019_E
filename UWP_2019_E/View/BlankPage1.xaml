@@ -10,8 +10,30 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <TextBlock Height="120" Margin="700,232,0,0" Text="Page 2" TextWrapping="Wrap" FontSize="40" HorizontalAlignment="Left" VerticalAlignment="Top" d:LayoutOverrides="Width"/>
-        <Button Content="Back" Height="80" Margin="0,0,170,230" VerticalAlignment="Bottom" Width="215" FontSize="26.667" HorizontalAlignment="Right">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Column="1" Text="Exercise 1" TextWrapping="Wrap" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold"/>
+
+        <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" Width="260">
+            <TextBlock TextWrapping="Wrap" Text="Login" FontSize="40" HorizontalAlignment="Center" Margin="0,0,0,10"/>
+            <TextBox TextWrapping="Wrap" Text="Login" FontSize="30" Margin="0,0,0,10"/>
+            <PasswordBox FontSize="30" Margin="0,0,0,10"/>
+            <StackPanel Height="100" Orientation="Horizontal" >
+                <Button Content="Login" HorizontalAlignment="Left" VerticalAlignment="Stretch" Width="130" BorderBrush="#FFE01414"/>
+                <Button Content="Cancel" HorizontalAlignment="Right" VerticalAlignment="Stretch" Width="130" Background="#330CE629" BorderBrush="#FF39996D"/>
+            </StackPanel>
+        </StackPanel>
+
+        <Button Grid.Row="2" Grid.Column="2" Content="Back" FontSize="40" HorizontalAlignment="Center">
             <Custom:Interaction.Behaviors>
                 <Custom1:EventTriggerBehavior EventName="Click">
                     <Custom1:NavigateToPageAction TargetPage="UWP_2019_E.MainPage"/>

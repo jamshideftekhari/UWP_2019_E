@@ -8,6 +8,29 @@
     x:Class="UWP_2019_E.View.Exe3"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.BottomAppBar>
+        <CommandBar>
+            <CommandBar.SecondaryCommands>
+                <AppBarButton Label="Save" Icon="Save">
+                    
+                </AppBarButton>
+            </CommandBar.SecondaryCommands>
+            <CommandBar.Content>
+                <Grid/>
+            </CommandBar.Content>
+            <AppBarButton Label="Delete" Icon="Delete">
+               
+            </AppBarButton>
+            <AppBarButton Label="Back" Icon="Back">
+                <Custom:Interaction.Behaviors>
+                    <Custom1:EventTriggerBehavior EventName="Click">
+                        <Custom1:NavigateToPageAction TargetPage="UWP_2019_E.MainPage"/>
+                    </Custom1:EventTriggerBehavior>
+                </Custom:Interaction.Behaviors>
+
+            </AppBarButton>
+        </CommandBar>
+    </Page.BottomAppBar>
 
     <Grid>
         <Grid.ColumnDefinitions>
